@@ -1,0 +1,14 @@
+# ╔══════════════════════════════════════════════════╗
+# ║  railway.toml — Konfigurasi Deployment Railway   ║
+# ║  Hallo Johor WhatsApp Bot                        ║
+# ╚══════════════════════════════════════════════════╝
+
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "node start.js"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 10
+healthcheckPath = "/"
+healthcheckTimeout = 30
